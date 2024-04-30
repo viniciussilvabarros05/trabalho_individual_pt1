@@ -24,7 +24,7 @@ export function createEvent() {
 
   for (let i = 0; i< talkerName.length; i++ ) {
     let letter = talkerName[i]
-    if (letter !== " " && letter !== ",") {
+    if (letter !== ",") {
       talkFormatter = talkFormatter + letter;
     }
 
@@ -37,13 +37,15 @@ export function createEvent() {
       
     }
   }
-
+  console.log(
+    "Caso haja mais de um público alvo, coloque os nomes separados por vírgula\n Exemplo: Menores de 15, Estudantes, professores"
+  );
   let distName = readline.question("- Públicos destinado:\n");
   let distFormatter = "";
 
   for (let i = 0; i< distName.length; i++ ) {
     let letter = distName[i]
-    if (letter !== " " && letter !== ",") {
+    if (letter !== ",") {
       distFormatter = distFormatter + letter ;
     }
 
@@ -94,7 +96,7 @@ export function updateEvent() {
         events[i][selected[prop]] = []
         for (let j = 0; j< changes.length; j++ ) {
           let letter = changes[j]
-          if (letter !== " " && letter !== ",") {
+          if (letter !== ",") {
             changesFormatter = changesFormatter + letter ;
           }
 
@@ -114,7 +116,7 @@ export function updateEvent() {
         events[i][selected[prop]] = []
         for (let j = 0; j< changes.length; j++ ) {
           let letter = talkerName[j]
-          if (letter !== " " && letter !== ",") {
+          if (letter !== ",") {
             changesFormatter = changesFormatter + letter ;
           }
 
